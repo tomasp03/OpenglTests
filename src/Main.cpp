@@ -1,26 +1,11 @@
 #include <iostream>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
-#include <fstream>
 
 #define WIN_W 1200
 #define WIN_H 1200
 
-std::string  LoadShader(const char* filename)
-{
-	std::ifstream in(filename, std::ios::binary);
-	if (in)
-	{
-		std::string contents;
-		in.seekg(0, std::ios::end);
-		contents.resize(in.tellg());
-		in.seekg(0, std::ios::beg);
-		in.read(&contents[0], contents.size());
-		in.close();
-		return(contents);
-	}
-	throw(errno);
-}
+
 
 static void KeyPressed(GLFWwindow* window, int key, int scancode, int action, int mods)
 {
