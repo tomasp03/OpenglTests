@@ -1,1 +1,2 @@
 C:\Users\tomas\Documents\Programování\Visual Studio Projects\C++\RayTracingMain\x64\Debug\RayTracingMain.exe
+C:\Users\tomas\Documents\Programing\Visual Studio Projects\C++\RayTracingMain\x64\Debug\RayTracingMain.exe

@@ -24,6 +24,12 @@
     <ClCompile Include="src\Shader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\VBO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VAO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\linmath.h">
@@ -32,8 +38,30 @@
     <ClInclude Include="src\Shader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\VBO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VAO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="shaders\basic.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RayTracingMain.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\..\Downloads\617fbc3e-9882-4bc9-863a-9ce509329dcb-profile_image-300x300 (1).ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\..\..\..\Downloads\617fbc3e-9882-4bc9-863a-9ce509329dcb-profile_image-300x300 (1).png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
