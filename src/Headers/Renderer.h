@@ -17,7 +17,8 @@ namespace Renderer
 	struct Data
 	{
 		float scale = 1.0f;
-		float color[4] = { 0.1f, 0.2f, 0.4f };
+		glm::vec4 color0 = glm::vec4(1.0f);
+		glm::vec4 color1 = glm::vec4(1.0f);
 		glm::vec2 position0 = { -0.9f, 0.9f };
 		glm::vec2 position1 = {  0.0f, 0.0f };
 	};

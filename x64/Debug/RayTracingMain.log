@@ -1,3 +1,3 @@
 ﻿  Renderer.cpp
-C:\Users\tomas\Documents\Programing\Visual Studio Projects\C++\RayTracingMain\src\Headers\Renderer.h(40,3): warning C4091: 'extern ': ignored on left of 'Renderer::Render' when no variable is declared
+C:\Users\tomas\Documents\Programing\Visual Studio Projects\C++\RayTracingMain\src\Headers\Renderer.h(41,3): warning C4091: 'extern ': ignored on left of 'Renderer::Render' when no variable is declared
   RayTracingMain.vcxproj -> C:\Users\tomas\Documents\Programing\Visual Studio Projects\C++\RayTracingMain\x64\Debug\RayTracingMain.exe
