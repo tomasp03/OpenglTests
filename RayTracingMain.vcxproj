@@ -71,19 +71,19 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)dependencies\include</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)dependencies\include;$(SolutionDir)src\Tests</IncludePath>
     <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(SolutionDir)dependencies\lib</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)dependencies\include</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)dependencies\include;$(SolutionDir)src\Tests</IncludePath>
     <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(SolutionDir)dependencies\lib</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)dependencies\include</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)dependencies\include;$(SolutionDir)src\Tests</IncludePath>
     <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(SolutionDir)dependencies\lib</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)dependencies\include</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)dependencies\include;$(SolutionDir)src\Tests</IncludePath>
     <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(SolutionDir)dependencies\lib</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -92,7 +92,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)/dependencies/include;$(SolutionDir)/dependencies/ImGui;$(SolutionDir)/src/Headers</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)src/Tests;$(SolutionDir)/dependencies/include;$(SolutionDir)/dependencies/ImGui;$(SolutionDir)/src/Headers</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
@@ -110,7 +110,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)/dependencies/include;$(SolutionDir)/dependencies/ImGui;$(SolutionDir)/src/Headers</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)src/Tests;$(SolutionDir)/dependencies/include;$(SolutionDir)/dependencies/ImGui;$(SolutionDir)/src/Headers</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
@@ -128,7 +128,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)/dependencies/include;$(SolutionDir)/dependencies/ImGui;$(SolutionDir)/src/Headers</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)src/Tests;$(SolutionDir)/dependencies/include;$(SolutionDir)/dependencies/ImGui;$(SolutionDir)/src/Headers</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
@@ -146,7 +146,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)/dependencies/include;$(SolutionDir)/dependencies/ImGui;$(SolutionDir)/src/Headers</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)src/Tests;$(SolutionDir)/dependencies/include;$(SolutionDir)/dependencies/ImGui;$(SolutionDir)/src/Headers</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
@@ -167,6 +167,7 @@
     <ClCompile Include="dependencies\ImGui\imgui_tables.cpp" />
     <ClCompile Include="dependencies\ImGui\imgui_widgets.cpp" />
     <ClCompile Include="dependencies\include\glm\detail\glm.cpp" />
+    <ClCompile Include="src\Tests\Squares.cpp" />
     <ClCompile Include="src\Code\EBO.cpp" />
     <ClCompile Include="src\Code\glad.c" />
     <ClCompile Include="src\Code\Loader.cpp" />
@@ -177,6 +178,7 @@
     <ClCompile Include="src\Code\VBO.cpp" />
     <ClCompile Include="src\Code\Window.cpp" />
     <ClCompile Include="src\Code\Shapes.cpp" />
+    <ClCompile Include="src\Tests\ClearColor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dependencies\ImGui\imconfig.h" />
@@ -471,6 +473,7 @@
     <ClInclude Include="dependencies\include\glm\vec3.hpp" />
     <ClInclude Include="dependencies\include\glm\vec4.hpp" />
     <ClInclude Include="dependencies\include\glm\vector_relational.hpp" />
+    <ClInclude Include="src\Tests\Squares.h" />
     <ClInclude Include="src\Headers\EBO.h" />
     <ClInclude Include="src\Headers\linmath.h" />
     <ClInclude Include="src\Headers\Loader.h" />
@@ -480,6 +483,8 @@
     <ClInclude Include="src\Headers\VAO.h" />
     <ClInclude Include="src\Headers\VBO.h" />
     <ClInclude Include="src\Headers\Window.h" />
+    <ClInclude Include="src\Tests\ClearColor.h" />
+    <ClInclude Include="src\Tests\Test.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
