@@ -1,4 +1,3 @@
-#include "Loader.h"
 #include "Renderer.h"
 
 #define WIN_W 1000

@@ -57,6 +57,11 @@ void Shader::Activate()
 	glUseProgram(m_ID);
 }
 
+void Shader::Deactivate()
+{
+	glUseProgram(0);
+}
+
 void Shader::Delete()
 {
 	glDeleteProgram(m_ID);

@@ -14,7 +14,7 @@ namespace test
 		~ClearColor();
 
 		void OnUpdate(float deltaTime);
-		void OnRender();
+		void OnRender(GLFWwindow* window);
 		void OnImGuiRender();
 
 	private:

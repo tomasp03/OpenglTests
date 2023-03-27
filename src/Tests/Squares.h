@@ -1,17 +1,17 @@
 #pragma once
 #include "Test.h"
 #include <glm/glm.hpp>
-#include <glad/glad.h>
 #include <imgui.h>
 #include <imgui_impl_opengl3.h>
 #include <imgui_impl_glfw.h>
+#include <string>
+#include <iostream>
 
 #include "Loader.h"
 #include "Shader.h"
 #include "VAO.h"
 #include "VBO.h"
 #include "EBO.h"
-#include "Window.h"
 #include "Shapes.h"
 
 namespace test
@@ -42,25 +42,26 @@ namespace test
     class Squares : public Test
     {
     public:
-        Squares(int w_width, int w_height);
+        Squares();
         ~Squares() override;
 
         void OnUpdate(float deltaTime) override;
-        void OnRender() override;
+        void OnRender(GLFWwindow* window) override;
         void OnImGuiRender() override;
-        GLFWwindow* WindowID();
+        //GLFWwindow* WindowID();
 
     private:
-        static const unsigned int MaxQuads = 1000000;
+        static const unsigned int MaxQuads = 1000;
         static const unsigned int NumberOfVertices = 4 * MaxQuads;
         static const unsigned int NumberOfIndices = 6 * MaxQuads;
         Data m_Squares[MaxQuads];
 
-        Window* m_window;
         Shader* m_shader;
         VBO* m_VBO;
         VAO* m_VAO;
         EBO* m_EBO;
+
+
 
         float dt;
         double prevTime;

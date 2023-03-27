@@ -16,6 +16,7 @@ public:
 	std::string Load(const char* filename);
 	unsigned int ID() { return m_ID; };
 	void Activate();
+	void Deactivate();
 	void Delete();
 
 	//unifom upload

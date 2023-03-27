@@ -24,6 +24,10 @@ namespace Renderer
 		bool run();
 
 		test::Squares* scene;
+		test::Test* currentTest;
+		test::TestMenu* testMenu;
+
+		Window* window;
 
 	private:
 		double currentFrame;
