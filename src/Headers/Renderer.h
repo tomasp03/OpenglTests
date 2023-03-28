@@ -14,20 +14,29 @@
 #include "ClearColor.h"
 
 #include "Squares.h"
+#include "Mandelbrot.h"
 
 namespace Renderer
 {
+	struct Settings
+	{
+		bool Vsync = true;
+		bool FullScreen = false;
+		bool justTrunedOff_FS = false;
+	};
 	extern class Render
 	{
 	public:
 		Render(int win_w, int win_h);
 		bool run();
 
-		test::Squares* scene;
 		test::Test* currentTest;
 		test::TestMenu* testMenu;
 
 		Window* window;
+		Settings settings;
+		int w_width = 0;
+		int w_height = 0;
 
 	private:
 		double currentFrame;

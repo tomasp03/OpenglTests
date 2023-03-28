@@ -33,8 +33,6 @@ namespace test
 		void OnImGuiRender() override;
 		void OnRender(GLFWwindow* window) override;
 
-		bool isVsync = true;
-
 		template<typename T>
 		void RegisterTest(const std::string& name)
 		{

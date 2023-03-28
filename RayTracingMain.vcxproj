@@ -167,6 +167,7 @@
     <ClCompile Include="dependencies\ImGui\imgui_tables.cpp" />
     <ClCompile Include="dependencies\ImGui\imgui_widgets.cpp" />
     <ClCompile Include="dependencies\include\glm\detail\glm.cpp" />
+    <ClCompile Include="src\Tests\Mandelbrot.cpp" />
     <ClCompile Include="src\Tests\Squares.cpp" />
     <ClCompile Include="src\Code\EBO.cpp" />
     <ClCompile Include="src\Code\glad.c" />
@@ -474,6 +475,7 @@
     <ClInclude Include="dependencies\include\glm\vec3.hpp" />
     <ClInclude Include="dependencies\include\glm\vec4.hpp" />
     <ClInclude Include="dependencies\include\glm\vector_relational.hpp" />
+    <ClInclude Include="src\Tests\Mandelbrot.h" />
     <ClInclude Include="src\Tests\Squares.h" />
     <ClInclude Include="src\Headers\EBO.h" />
     <ClInclude Include="src\Headers\linmath.h" />
@@ -628,6 +630,11 @@
     <None Include="README.md" />
     <None Include="shaders\basic.frag" />
     <None Include="shaders\basic.vert" />
+    <None Include="shaders\Forrest.frag" />
+    <None Include="shaders\Mandelbrot.frag" />
+    <None Include="shaders\Mandelbrot.vert" />
+    <None Include="shaders\Terrain.frag" />
+    <None Include="shaders\water.frag" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="dependencies\include\glm\CMakeLists.txt" />

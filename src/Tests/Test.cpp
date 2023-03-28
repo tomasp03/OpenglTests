@@ -15,7 +15,6 @@ void test::TestMenu::OnImGuiRender()
 		}
 	}
 
-	ImGui::Checkbox("Vsync", &isVsync);
 }
 
 void test::TestMenu::OnRender(GLFWwindow* window)

@@ -1,7 +1,11 @@
 #include "Renderer.h"
 
 Renderer::Render::Render(int win_w, int win_h)
+	: currentTest(nullptr), testMenu(new test::TestMenu(currentTest))
 {
+	w_width = win_w;
+	w_height = win_h;
+	currentTest = testMenu;
 	double currentFrame = glfwGetTime();
 	double lastFrame = currentFrame;
 
@@ -24,8 +28,6 @@ Renderer::Render::Render(int win_w, int win_h)
 	wclass.ViewportFlagsOverrideSet = ImGuiViewportFlags_CanHostOtherWindows;
 
 
-
-
 	ImGui::StyleColorsDark();
 	Loader::GLFW();
 	window = new Window(win_w, win_h, "title");
@@ -36,20 +38,28 @@ Renderer::Render::Render(int win_w, int win_h)
 	ImGui_ImplGlfw_InitForOpenGL(window->GetID(), true);
 	ImGui_ImplOpenGL3_Init("#version 460");
 
-	glfwSwapInterval(1);
-	currentTest = nullptr;
-	testMenu = new test::TestMenu(currentTest);
-	currentTest = testMenu;
 
 	testMenu->RegisterTest<test::ClearColor>("Clear color");
+	testMenu->RegisterTest<test::Mandelbrot>("Mandelbrot");
 	testMenu->RegisterTest<test::Squares>("Squares");
-
 }
 
 
 bool Renderer::Render::run()
 {
-	glfwSwapInterval(testMenu->isVsync);
+	const GLFWvidmode* mode = glfwGetVideoMode(glfwGetPrimaryMonitor());
+	if (settings.FullScreen)
+	{
+		glfwSetWindowMonitor(window->GetID(), glfwGetPrimaryMonitor(), 0, 0, mode->width, mode->height, mode->refreshRate);
+		settings.justTrunedOff_FS = true;
+	}
+	else if (settings.justTrunedOff_FS && !settings.FullScreen)
+	{
+		glfwSetWindowMonitor(window->GetID(), NULL, mode->width/5, mode->height/5, w_width, w_height, mode->refreshRate);
+		glfwWindowHint(GLFW_DECORATED, GLFW_TRUE);
+		settings.justTrunedOff_FS = false;
+	}
+	glfwSwapInterval(settings.Vsync);
 	currentFrame = glfwGetTime();
 	deltaTime = currentFrame - lastFrame;
 	lastFrame = currentFrame;
@@ -71,6 +81,12 @@ bool Renderer::Render::run()
 			currentTest = testMenu;
 		}
 		currentTest->OnImGuiRender();
+		ImGui::End();
+
+		ImGui::Begin("Settings");
+		ImGui::SetWindowFontScale(3.0f);
+		ImGui::Checkbox("Vsync", &settings.Vsync);
+		ImGui::Checkbox("FullScreen", &settings.FullScreen);
 		ImGui::End();
 		ImGui::Render();
 		ImGui::EndFrame();
