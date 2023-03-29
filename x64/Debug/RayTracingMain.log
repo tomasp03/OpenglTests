@@ -1,6 +1,15 @@
-﻿  Renderer.cpp
+﻿  Main.cpp
 C:\Users\tomas\Documents\Programing\Visual Studio Projects\C++\RayTracingMain\src\Headers\Loader.h(2,1): warning C4005: 'GLFW_INCLUDE_NONE': macro redefinition
 C:\Users\tomas\Documents\Programing\Visual Studio Projects\C++\RayTracingMain\src\Headers\Loader.h(2,1): message : 'GLFW_INCLUDE_NONE' previously declared on the command line
-C:\Users\tomas\Documents\Programing\Visual Studio Projects\C++\RayTracingMain\src\Headers\Renderer.h(45,3): warning C4091: 'extern ': ignored on left of 'Renderer::Render' when no variable is declared
-C:\Users\tomas\Documents\Programing\Visual Studio Projects\C++\RayTracingMain\src\Code\Renderer.cpp(71,25): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\tomas\Documents\Programing\Visual Studio Projects\C++\RayTracingMain\src\Headers\Renderer.h(46,3): warning C4091: 'extern ': ignored on left of 'Renderer::Render' when no variable is declared
+  Renderer.cpp
+C:\Users\tomas\Documents\Programing\Visual Studio Projects\C++\RayTracingMain\src\Headers\Loader.h(2,1): warning C4005: 'GLFW_INCLUDE_NONE': macro redefinition
+C:\Users\tomas\Documents\Programing\Visual Studio Projects\C++\RayTracingMain\src\Headers\Loader.h(2,1): message : 'GLFW_INCLUDE_NONE' previously declared on the command line
+C:\Users\tomas\Documents\Programing\Visual Studio Projects\C++\RayTracingMain\src\Headers\Renderer.h(46,3): warning C4091: 'extern ': ignored on left of 'Renderer::Render' when no variable is declared
+C:\Users\tomas\Documents\Programing\Visual Studio Projects\C++\RayTracingMain\src\Code\Renderer.cpp(72,25): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  ComputeShader.cpp
+C:\Users\tomas\Documents\Programing\Visual Studio Projects\C++\RayTracingMain\src\Tests\ComputeShader.cpp(172,43): warning C4244: 'argument': conversion from 'double' to 'GLuint', possible loss of data
+C:\Users\tomas\Documents\Programing\Visual Studio Projects\C++\RayTracingMain\src\Tests\ComputeShader.cpp(172,24): warning C4244: 'argument': conversion from 'double' to 'GLuint', possible loss of data
+  Generating Code...
+C:\Users\tomas\Documents\Programing\Visual Studio Projects\C++\RayTracingMain\src\Tests\ComputeShader.cpp(161): warning C4715: 'test::ComputeShader::Load': not all control paths return a value
   RayTracingMain.vcxproj -> C:\Users\tomas\Documents\Programing\Visual Studio Projects\C++\RayTracingMain\x64\Debug\RayTracingMain.exe

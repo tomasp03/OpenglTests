@@ -1,7 +1,7 @@
 #include "Renderer.h"
 
-#define WIN_W 1000
-#define WIN_H 1000
+#define WIN_W 1200
+#define WIN_H 1200
 
 
 int main()

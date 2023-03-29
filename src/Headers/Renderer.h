@@ -15,6 +15,7 @@
 
 #include "Squares.h"
 #include "Mandelbrot.h"
+#include "ComputeShader.h"
 
 namespace Renderer
 {

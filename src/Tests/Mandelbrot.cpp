@@ -34,7 +34,7 @@ namespace test
 		glfwGetCursorPos(window, &mouse_x, &mouse_y);
 
 		currentShader->Activate();
-		currentShader->uni1f("u_Time", 4*glfwGetTime());
+		currentShader->uni1f("u_Time", glfwGetTime());
 		currentShader->uni2f("u_resolution", width, height);
 		currentShader->uni2f("u_Mouse", (float)mouse_x, (float)mouse_y);
 		m_VAO->Bind();

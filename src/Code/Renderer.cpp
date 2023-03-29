@@ -42,6 +42,7 @@ Renderer::Render::Render(int win_w, int win_h)
 	testMenu->RegisterTest<test::ClearColor>("Clear color");
 	testMenu->RegisterTest<test::Mandelbrot>("Mandelbrot");
 	testMenu->RegisterTest<test::Squares>("Squares");
+	testMenu->RegisterTest<test::ComputeShader>("ComputeShader");
 }
 
 

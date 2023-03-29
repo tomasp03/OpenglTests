@@ -19,7 +19,7 @@ uniform vec2 u_resolution;
 
 
 // increase this if you have a very fast GPU
-#define AA 4
+#define AA 2
 
 
 

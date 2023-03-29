@@ -167,6 +167,8 @@
     <ClCompile Include="dependencies\ImGui\imgui_tables.cpp" />
     <ClCompile Include="dependencies\ImGui\imgui_widgets.cpp" />
     <ClCompile Include="dependencies\include\glm\detail\glm.cpp" />
+    <ClCompile Include="dependencies\include\stb\stb_implementation.cpp" />
+    <ClCompile Include="src\Tests\ComputeShader.cpp" />
     <ClCompile Include="src\Tests\Mandelbrot.cpp" />
     <ClCompile Include="src\Tests\Squares.cpp" />
     <ClCompile Include="src\Code\EBO.cpp" />
@@ -475,6 +477,9 @@
     <ClInclude Include="dependencies\include\glm\vec3.hpp" />
     <ClInclude Include="dependencies\include\glm\vec4.hpp" />
     <ClInclude Include="dependencies\include\glm\vector_relational.hpp" />
+    <ClInclude Include="dependencies\include\stb\stb_image.h" />
+    <ClInclude Include="dependencies\include\stb\stb_image_write.h" />
+    <ClInclude Include="src\Tests\ComputeShader.h" />
     <ClInclude Include="src\Tests\Mandelbrot.h" />
     <ClInclude Include="src\Tests\Squares.h" />
     <ClInclude Include="src\Headers\EBO.h" />
@@ -628,6 +633,7 @@
     <None Include="dependencies\include\glm\gtx\vector_query.inl" />
     <None Include="dependencies\include\glm\gtx\wrap.inl" />
     <None Include="README.md" />
+    <None Include="shaders\Basic.comp" />
     <None Include="shaders\basic.frag" />
     <None Include="shaders\basic.vert" />
     <None Include="shaders\Forrest.frag" />
