@@ -38,7 +38,6 @@ Renderer::Render::Render(int win_w, int win_h)
 	ImGui_ImplGlfw_InitForOpenGL(window->GetID(), true);
 	ImGui_ImplOpenGL3_Init("#version 460");
 
-
 	testMenu->RegisterTest<test::ClearColor>("Clear color");
 	testMenu->RegisterTest<test::Mandelbrot>("Mandelbrot");
 	testMenu->RegisterTest<test::Squares>("Squares");

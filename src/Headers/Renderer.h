@@ -16,6 +16,7 @@
 #include "Squares.h"
 #include "Mandelbrot.h"
 #include "ComputeShader.h"
+#include "stb/stb_image.h"
 
 namespace Renderer
 {
