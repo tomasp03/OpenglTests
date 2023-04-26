@@ -77,6 +77,11 @@ void Shader::uni2f(const char* name, float data1, float data2)
 	glUniform2f(glGetUniformLocation(m_ID, name), data1, data2);
 }
 
+void Shader::uni3f(const char* name, float data1, float data2, float data3)
+{
+	glUniform3f(glGetUniformLocation(m_ID, name), data1, data2, data3);
+}
+
 void Shader::uni4f(const char* name, float data1, float data2, float data3, float data4)
 {
 	glUniform4f(glGetUniformLocation(m_ID, name), data1, data2, data3, data4);

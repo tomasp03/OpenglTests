@@ -4,21 +4,6 @@ out vec4 FragColor;
 uniform float u_Time;
 uniform vec2 u_resolution;
 
-// Created by inigo quilez - iq/2013
-//   https://www.youtube.com/c/InigoQuilez
-//   https://iquilezles.org
-// I share this piece (art and code) here in Shadertoy and through its Public API, only for educational purposes. 
-// You cannot use, sell, share or host this piece or modifications of it as part of your own commercial or non-commercial product, website or project.
-// You can share a link to it or an unmodified screenshot of it provided you attribute "by Inigo Quilez, @iquilezles and iquilezles.org". 
-// If you are a teacher, lecturer, educator or similar and these conditions are too restrictive for your needs, please contact me and we'll work it out.
-
-
-// See here for more information on smooth iteration count:
-//
-// https://iquilezles.org/articles/msetsmooth
-
-
-// increase this if you have a very fast GPU
 #define AA 2
 
 
@@ -27,9 +12,7 @@ float mandelbrot( in vec2 c )
 {
     {
         float c2 = dot(c, c);
-        // skip computation inside M1 - https://iquilezles.org/articles/mset1bulb
         if( 256.0*c2*c2 - 96.0*c2 + 32.0*c.x - 3.0 < 0.0 ) return 0.0;
-        // skip computation inside M2 - https://iquilezles.org/articles/mset2bulb
         if( 16.0*(c2+2.0*c.x+1.0) - 1.0 < 0.0 ) return 0.0;
     }
 
@@ -45,12 +28,7 @@ float mandelbrot( in vec2 c )
     }
 
     if( l>511.0 ) return 0.0;
-    
-    // ------------------------------------------------------
-    // smooth interation count
-    //float sl = l - log(log(length(z))/log(B))/log(2.0);
 
-    // equivalent optimized smooth interation count
     float sl = l - log2(log2(dot(z,z))) + 4.0;
 
     float al = smoothstep( -0.1, 0.0, sin(0.5*6.2831*u_Time ) );

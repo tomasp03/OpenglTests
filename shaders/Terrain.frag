@@ -4,17 +4,6 @@ out vec4 FragColor;
 uniform float u_Time;
 uniform vec2 u_resolution;
 
-/*
-* Author: Andrew Vaillancourt
-* GitHub, Twitter: @avcourt
-*
-* For a detailed README see github.com/avcourt/terrain
-*
-*/
-
-// CONSTANTS, try playing around with some values
-
-// colors
 const vec3 SKY_COL = vec3(0.76,0.94, 1.0);
 const vec3 MTN_COL = vec3(0.4, 0.2, 0.0);
 const vec3 ICE_COL = vec3(0.9, 0.9, 1.0);

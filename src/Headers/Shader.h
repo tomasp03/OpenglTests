@@ -22,6 +22,7 @@ public:
 	//unifom upload
 	void uni1f(const char* name, float data);
 	void uni2f(const char* name, float data1, float data2);
+	void uni3f(const char* name, float data1, float data2, float data3);
 	void uni4f(const char* name, float data1, float data2, float data3, float data4);
 };
 

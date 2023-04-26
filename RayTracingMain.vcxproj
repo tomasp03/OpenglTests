@@ -168,6 +168,7 @@
     <ClCompile Include="dependencies\ImGui\imgui_widgets.cpp" />
     <ClCompile Include="dependencies\include\glm\detail\glm.cpp" />
     <ClCompile Include="dependencies\include\stb\stb_implementation.cpp" />
+    <ClCompile Include="src\Tests\RayTrace.cpp" />
     <ClCompile Include="src\Tests\ComputeShader.cpp" />
     <ClCompile Include="src\Tests\Mandelbrot.cpp" />
     <ClCompile Include="src\Tests\Squares.cpp" />
@@ -479,6 +480,7 @@
     <ClInclude Include="dependencies\include\glm\vector_relational.hpp" />
     <ClInclude Include="dependencies\include\stb\stb_image.h" />
     <ClInclude Include="dependencies\include\stb\stb_image_write.h" />
+    <ClInclude Include="src\Tests\RayTrace.h" />
     <ClInclude Include="src\Tests\ComputeShader.h" />
     <ClInclude Include="src\Tests\Mandelbrot.h" />
     <ClInclude Include="src\Tests\Squares.h" />
@@ -639,6 +641,10 @@
     <None Include="shaders\Forrest.frag" />
     <None Include="shaders\Mandelbrot.frag" />
     <None Include="shaders\Mandelbrot.vert" />
+    <None Include="shaders\RT_shaders\Basic2.comp" />
+    <None Include="shaders\RT_shaders\main.frag" />
+    <None Include="shaders\RT_shaders\main.vert" />
+    <None Include="shaders\RT_shaders\texture.frag" />
     <None Include="shaders\Terrain.frag" />
     <None Include="shaders\water.frag" />
   </ItemGroup>

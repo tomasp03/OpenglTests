@@ -87,6 +87,9 @@
     <ClCompile Include="dependencies\include\stb\stb_implementation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Tests\RayTrace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dependencies\ImGui\imconfig.h">
@@ -1013,6 +1016,9 @@
     <ClInclude Include="dependencies\include\stb\stb_image_write.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Tests\RayTrace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="shaders\basic.vert" />
@@ -1433,6 +1439,10 @@
     <None Include="shaders\water.frag" />
     <None Include="shaders\Forrest.frag" />
     <None Include="shaders\Basic.comp" />
+    <None Include="shaders\RT_shaders\main.vert" />
+    <None Include="shaders\RT_shaders\main.frag" />
+    <None Include="shaders\RT_shaders\Basic2.comp" />
+    <None Include="shaders\RT_shaders\texture.frag" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="dependencies\include\glm\CMakeLists.txt" />

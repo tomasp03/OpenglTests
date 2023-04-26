@@ -25,6 +25,7 @@ namespace test
 
 		int s_widht = 1200;
 		int s_height = 1200;
+		std::string Load(const char* filename);
 
 	public:
 		ComputeShader();
@@ -33,6 +34,5 @@ namespace test
 		void OnImGuiRender() override;
 
 
-		std::string Load(const char* filename);
 	};
 }

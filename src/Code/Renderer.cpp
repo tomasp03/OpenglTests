@@ -32,8 +32,8 @@ Renderer::Render::Render(int win_w, int win_h)
 	Loader::GLFW();
 	window = new Window(win_w, win_h, "title");
 	Loader::GladGL();
-	glEnable(GL_BLEND);
-	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	//glEnable(GL_BLEND);
+	//glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	//Loader::ImGui(m_window->GetID());
 	ImGui_ImplGlfw_InitForOpenGL(window->GetID(), true);
 	ImGui_ImplOpenGL3_Init("#version 460");
@@ -42,6 +42,8 @@ Renderer::Render::Render(int win_w, int win_h)
 	testMenu->RegisterTest<test::Mandelbrot>("Mandelbrot");
 	testMenu->RegisterTest<test::Squares>("Squares");
 	testMenu->RegisterTest<test::ComputeShader>("ComputeShader");
+	testMenu->RegisterTest<test::RayTrace>("RayTracer");
+
 }
 
 
@@ -55,7 +57,7 @@ bool Renderer::Render::run()
 	}
 	else if (settings.justTrunedOff_FS && !settings.FullScreen)
 	{
-		glfwSetWindowMonitor(window->GetID(), NULL, mode->width/5, mode->height/5, w_width, w_height, mode->refreshRate);
+		glfwSetWindowMonitor(window->GetID(), NULL, mode->width / 5, mode->height / 5, w_width, w_height, mode->refreshRate);
 		glfwWindowHint(GLFW_DECORATED, GLFW_TRUE);
 		settings.justTrunedOff_FS = false;
 	}
@@ -74,7 +76,7 @@ bool Renderer::Render::run()
 		ImGui_ImplGlfw_NewFrame();
 		ImGui::NewFrame();
 		ImGui::Begin("Test");
-		ImGui::SetWindowFontScale(3.0f);
+		//ImGui::SetWindowFontScale(3.0f);
 		if (currentTest != testMenu && ImGui::Button("<-"))
 		{
 			delete currentTest;
@@ -84,7 +86,7 @@ bool Renderer::Render::run()
 		ImGui::End();
 
 		ImGui::Begin("Settings");
-		ImGui::SetWindowFontScale(3.0f);
+		//ImGui::SetWindowFontScale(3.0f);
 		ImGui::Checkbox("Vsync", &settings.Vsync);
 		ImGui::Checkbox("FullScreen", &settings.FullScreen);
 		ImGui::End();

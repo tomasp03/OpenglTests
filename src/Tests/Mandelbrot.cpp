@@ -38,7 +38,7 @@ namespace test
 		currentShader->uni2f("u_resolution", width, height);
 		currentShader->uni2f("u_Mouse", (float)mouse_x, (float)mouse_y);
 		m_VAO->Bind();
-		m_VBO->Bind();
+		//m_VBO->Bind();
 		glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 	}
 
