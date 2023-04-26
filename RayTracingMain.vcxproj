@@ -24,6 +24,7 @@
     <ProjectGuid>{d6213039-69a1-4d19-89ee-8decb1113e8d}</ProjectGuid>
     <RootNamespace>RayTracingMain</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>OpenglTests</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
